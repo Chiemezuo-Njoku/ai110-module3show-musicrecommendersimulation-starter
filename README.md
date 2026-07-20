@@ -261,5 +261,25 @@ Write 1 to 2 paragraphs here about what you learned:
 - about how recommenders turn data into predictions
 - about where bias or unfairness could show up in systems like this
 
+### Engineering Reflection
+
+*(Draft — edit into your own words before submitting.)*
+
+My biggest learning moment was realizing that the "intelligence" of this recommender lives in its
+weights, not its code: the moment I watched a request for sad music return upbeat pop, I understood
+that a few small numbers quietly decided what every user would see. Working with AI tools sped up the
+mechanical parts enormously — scaffolding the CSV loader, the scoring function, and the evaluation
+harness — but the project taught me that I had to stay the engineer in the loop. I caught real issues
+the tools introduced or assumed: a runner script that only worked from one directory, a terminal
+encoding glitch that garbled the output, and a claim that "one song dominated every list" that turned
+out not to match my actual results. Those corrections reminded me that AI output is a strong first
+draft, not a finished answer, and that verifying against real data is my responsibility. What struck
+me most is *why* such a simple rule — add up a few points and sort — can still feel intelligent: when
+the reasons are transparent and the top pick genuinely shares the listener's genre and energy, the
+result reads as thoughtful even though no real understanding is happening. If I extended this project,
+I would prioritize balancing the dataset and scoring more features (like acousticness and valence)
+first, since our testing showed the catalog's imbalance, more than the algorithm, was the real limit
+on fair and varied recommendations.
+
 
 
